@@ -1,0 +1,373 @@
+
+*** Running vivado
+    with args -log fading_led.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fading_led.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source fading_led.tcl -notrace
+Command: synth_design -top fading_led -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1848 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 364.906 ; gain = 99.836
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fading_led' [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_led.vhd:34]
+INFO: [Synth 8-3491] module 'fading_freq' declared at 'C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_freq.vhd:28' bound to instance 'fading_freq_i' of component 'fading_freq' [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_led.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'fading_freq' [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_freq.vhd:38]
+	Parameter TEMPO bound to: 400000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fading_freq' (1#1) [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_freq.vhd:38]
+INFO: [Synth 8-3491] module 'fading_pwm' declared at 'C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_pwm.vhd:26' bound to instance 'fading_pwm_i' of component 'fading_pwm' [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_led.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'fading_pwm' [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_pwm.vhd:37]
+WARNING: [Synth 8-614] signal 'pwm_cont' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_pwm.vhd:43]
+WARNING: [Synth 8-614] signal 'COUNTER' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_pwm.vhd:43]
+WARNING: [Synth 8-614] signal 'pwm_signal' is read in the process but is not in the sensitivity list [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_pwm.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'fading_pwm' (2#1) [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_pwm.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'fading_led' (3#1) [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_led.vhd:34]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 412.707 ; gain = 147.637
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 412.707 ; gain = 147.637
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED16_B'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[0]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[1]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[2]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[3]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[4]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[5]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[6]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Seg[7]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[0]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[1]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[2]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[3]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[4]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[5]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[6]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'An[7]'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Rst'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Up'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Mode'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Down'. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/constrs_1/imports/Proiect/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fading_led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fading_led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 743.316 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 743.316 ; gain = 478.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 743.316 ; gain = 478.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 743.316 ; gain = 478.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_freq.vhd:46]
+INFO: [Synth 8-5546] ROM "fade_inout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fade_inout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_freq.vhd:46]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 743.316 ; gain = 478.246
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	               19 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fading_freq 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fading_pwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "fading_freq_i/cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fading_freq_i/fade_inout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fading_freq_i/fade_inout" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element fading_freq_i/cnt_reg was removed.  [C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.srcs/sources_1/new/fading_freq.vhd:46]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 743.316 ; gain = 478.246
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 758.434 ; gain = 493.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 778.832 ; gain = 513.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     4|
+|4     |LUT2   |    10|
+|5     |LUT4   |    10|
+|6     |LUT5   |     4|
+|7     |LUT6   |     6|
+|8     |FDRE   |    34|
+|9     |IBUF   |     1|
+|10    |OBUF   |    10|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------+------------+------+
+|      |Instance        |Module      |Cells |
++------+----------------+------------+------+
+|1     |top             |            |    88|
+|2     |  fading_freq_i |fading_freq |    56|
+|3     |  fading_pwm_i  |fading_pwm  |    20|
++------+----------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 780.109 ; gain = 184.430
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 780.109 ; gain = 515.039
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 28 Warnings, 23 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 780.207 ; gain = 528.043
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Student/Desktop/Proiect/Proiect/project_1/project_1.runs/synth_1/fading_led.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fading_led_utilization_synth.rpt -pb fading_led_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 780.207 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 26 11:02:30 2018...
